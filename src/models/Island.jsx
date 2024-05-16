@@ -63,5 +63,5 @@ const Island  = (props)  => {
   )
 }
 
-useGLTF.preload(isLandHome)
+
 export default Island
