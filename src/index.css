@@ -1,25 +1,79 @@
-.button-primary{
-  background: blue;
-  color: white;
-  padding: 10px 14px;
+body{
   margin: 0px;
-  transition: 0.5s;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-
-
-
-
-
+  padding: 0px;
 }
 
-.button-primary:hover {
-background: rgb(82, 105, 236);
-color: black;
-cursor: pointer;
-box-shadow:  2px 3px 1px 1px rgb(82, 105, 236) ;
+.search{
 
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+  margin: auto;
+  padding: 10px;
 
 }
+.logo {
+  margin: auto;
+}
+.order-list{
+  margin: auto;
+  list-style-type: none;
+  font-size: medium;
+  display: inline-flex;
+  gap: 10px;
+  
+}
 
+.search-button{
+  margin: auto;
+}
+.sidebar-button{
+  display: none;
+}
+@media screen and (max-width : 768px) {
+    .order-list{
+      display: none;
+    }
+    .sidebar-button{
+      display: block;
+    }
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+.order-link{
+  list-style-type: none;
+  color: black;
+  text-decoration: none ;
+  font-family:sans-serif;
+  font-size: small;
+
+}
+li{
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* This sets the gap to 4 units, typically 16px (4 * 4px) */
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+.container-content{
+  padding: 20px;
+}
