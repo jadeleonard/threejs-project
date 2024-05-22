@@ -7,13 +7,10 @@ import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import './ui/Alert-dialog.css'
 
 const Navbar = () => {
-const [alertDialog,setAlertDialog] = useState(false);
+
 
 const [bar,setBar] = useState(false);
-const handleAlertDialog = (e) =>{
-    preventDefault(e);
-    setAlertDialog(!alertDialog);
-};
+
 const handleBar = (e) =>{
     preventDefault(e);
     setBar(!bar)
@@ -64,17 +61,11 @@ const handleBar = (e) =>{
       <AlertDialog.Portal>
         <AlertDialog.Overlay className='AlertDialogOverlay'/>
       <AlertDialog.Content className='AlertDialogContent'>
-      <AlertDialog.Title className="AlertDialogTitle">Are you absolutely sure?</AlertDialog.Title>
+      <AlertDialog.Title className="AlertDialogTitle">Search for your Favorite Product</AlertDialog.Title>
         <AlertDialog.Description className="AlertDialogDescription">
-          This action cannot be undone. This will permanently delete your account and remove your
-          data from our servers.
+          <Input  type='search' placeholder='Search'/>
         </AlertDialog.Description>
-        <AlertDialog.Cancel asChild>
-            <button className="Button mauve">Cancel</button>
-          </AlertDialog.Cancel>
-          <AlertDialog.Action asChild>
-            <button className="Button red">Yes, delete account</button>
-          </AlertDialog.Action>
+        <Button type='default'>Search</Button>
       </AlertDialog.Content>
       </AlertDialog.Portal>
       </AlertDialog.Root>
